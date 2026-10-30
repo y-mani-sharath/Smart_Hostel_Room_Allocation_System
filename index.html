@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f7fb">
+  <title>Smart Hostel | Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="js/storage.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#dashboard" aria-label="Smart Hostel dashboard">
+        <span class="brand-mark"><i data-lucide="building-2"></i></span>
+        <span class="brand-copy"><strong>Haven</strong><small>HOSTEL ADMIN</small></span>
+      </a>
+      <div class="nav-label">WORKSPACE</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#dashboard" data-nav="dashboard"><i data-lucide="layout-dashboard"></i><span>Dashboard</span></a>
+        <a href="#students" data-nav="students"><i data-lucide="users-round"></i><span>Students</span><b id="studentNavCount"></b></a>
+        <a href="#rooms" data-nav="rooms"><i data-lucide="door-open"></i><span>Rooms</span></a>
+        <a href="#allocation" data-nav="allocation"><i data-lucide="sparkles"></i><span>Smart allocation</span><b id="pendingNavCount"></b></a>
+        <a href="#records" data-nav="records"><i data-lucide="clipboard-list"></i><span>Allocation records</span></a>
+        <a href="#reports" data-nav="reports"><i data-lucide="chart-no-axes-column-increasing"></i><span>Reports</span></a>
+      </nav>
+      <div class="nav-label settings-label">PREFERENCES</div>
+      <nav class="main-nav"><a href="#settings" data-nav="settings"><i data-lucide="settings-2"></i><span>Settings</span></a></nav>
+      <div class="sidebar-bottom">
+        <div class="support-card"><span class="support-icon"><i data-lucide="shield-check"></i></span><strong>Admin workspace</strong><p>Your hostel data stays in this browser.</p></div>
+        <div class="admin-profile"><span class="avatar">AD</span><span><strong>Administrator</strong><small>Hostel office</small></span><i data-lucide="chevron-down"></i></div>
+      </div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar">
+        <button class="icon-button mobile-menu" data-action="toggle-menu" aria-label="Open navigation"><i data-lucide="menu"></i></button>
+        <div class="breadcrumb"><span>Workspace</span><i data-lucide="chevron-right"></i><strong id="pageTitle">Dashboard</strong></div>
+        <div class="topbar-actions"><span class="today-label" id="todayLabel"></span><button class="icon-button" data-action="show-shortcuts" aria-label="Help"><i data-lucide="circle-help"></i></button><span class="top-avatar">A</span></div>
+      </header>
+      <div id="pageRoot" class="page-root"></div>
+    </main>
+  </div>
+  <div id="modalRoot"></div>
+  <div id="toastRoot" class="toast-stack" aria-live="polite"></div>
+</body>
+</html>
